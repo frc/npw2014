@@ -1,44 +1,95 @@
 [% WRAPPER ui title = global.conference.name %]
 
-<p>
-Welcome to Our Conference web site.
-</p>
-
-<p>
-consequatur veniam voluptatem quod tempor modi atque amet voluptatum
-maxime voluptas reprehenderit duis animi cupidatat commodi incididunt
-rerum unde magna delectus dolor alias ab iste corporis vel natus saepe
-</p>
-
-<p>
-Watch this space for updates, or check the <a href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml">feed</a>.
-</p>
-
-[% news = global.news(3);
-   IF news.size > 2;
-     more = news.pop;
-   END;
- %]
-
-[% IF news.size %]
-<h2>Latest News</h2>
-[% FOREACH item = news %]
-<div class="news-entry">
- <h3 class="news-header">
-  <span class="news-date">[% date_format(item.datetime, 'date_short') %]</span>
-  <span class="news-title">[% item.title %]</span>
- </h3>
- <div class="news-text">
-  [% item.content %]
- </div>
+<div class="bg-image-container">
+	<div class="frontpage-text__wrapper">
+		<p class="frontpage-text">
+			Nordic Perl Workshop 2014
+			<!-- <span class="cursor">_</span> -->
+		</p>
+		<div class="frontpage-text__buttons">
+			<a href="register" class="frontpage-button">Register</a>
+			<a href="newtalk" class="frontpage-button">Submit a talk</a>
+			<a href="#info" class="frontpage-button">Info</a>
+		</div>
+	</div>
 </div>
-[% END %]
-[% END %]
+<div class="container">
+	<section id="info" class="fsection frontpage-section__info">
+		<div class="section-content-wrapper">
+			<h2>NPW 2014</h2>
+			<p>
+				Helsinki Perl Mongers invite you to Helsinki at the Nordic Perl Workshop 2014.
+			</p>
+			<p>
+				The Workshop consist of a hackathon on <strong>November 16th</strong> at Frantic offices in Helsinki city centre and the workshop and social event on <strong>November 17th</strong> in nearby locations.
+			</p>
+			<p>
+				We welcome you to register and submit your talks and any ideas for the hackathon on our workshop website 
+			</p>
+		</div>
+	</section>
+	<section id="schedule" class="ssection frontpage-section__schedule">
+		<div class="section-content-wrapper">
+			<h2>Schedule</h2>
+			<h3>Sunday November 16th </h3>
+			<div class="schedule-row">
+				<p class="time">11:00</p>
+				<p class="indent">
+					Hackathon <br>
+					<i>Location: Frantic, Kalevankatu 30, Helsinki</i>
+				</p>
+			</div>
+			<div class="schedule-row">
+				<p class="time">19:00</p>
+				<p class="indent">
+					Social Event <br>
+					<i>Location: Frantic and a nearby pub</i>
+				</p>
+			</div>
+			<h3>Monday November 17th</h3>
+			<div class="schedule-row">
+				<p class="time">10:00</p>
+				<p class="indent">
+					Presentations <br>
+					<i>Location will be announced later</i>
+				</p>
+			</div>
+			<div class="schedule-row">
+				<p class="time">18:00</p>
+				<p class="indent">
+					Sauna and Food <br>
+					<i>Location will be announced later</i>
+				</p>
+			</div>
+		</div>
+	</section>
+	<section id="news" class="fsection frontpage-section__news">
+		<h2>News</h2>
+		[% IF news.size %]
+			<div class="newsbox">
+			[% FOREACH n = news %]
+				<h3><a href="[% n.link %]">[% n.title %]</a></h3>
+				<p>
+					<em>[% date_format(n.datetime, 'datetime_short') %] {{by}} [% user_info(n.user) %]</em>
+			    	<br />
+			   		[% texts.${loop.index} %]
+				</p>
+			[% END %]
+			</div>
+		[% ELSE %]
+			<p>{{No news yet!}}</p>
+		[% END %]
+	</section>
+	<section id="venue" class="fsection frontpage-section__venue">
+		<div class="section-content-wrapper">
+			<h2>Venue</h2>
+			<p>
+				<strong>Frantic</strong> 
+				<br> 
+				Kalevankatu 30, Helsinki 
+			</p>
+		</div>
+	</section>
+</div>
 
-[% IF more %]
-<p>
- <a href="[% make_uri('news') %]" class="news-link">Older announcements</a>
-</p>
-[% END %]
-
-[% END %]
+[%END%]

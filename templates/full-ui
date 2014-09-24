@@ -17,9 +17,6 @@
 	<!-- CSS Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'format.css') %]" />
 	<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'npw.css') %]" />
-	<!--[if IE 9]>
-		<link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'npwie9.css') %]">
-	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="/css/act-base.css" />
 	<link rel="stylesheet" type="text/css" href="/css/schedule.css" />
 
@@ -35,6 +32,9 @@
 
 	<!-- Favorite icon -->
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+	<!-- typography -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,300,700|Montserrat:400,700" />
 </head>
 
 <body>
@@ -59,5 +59,12 @@
 		</section>
 	</nav>
 	[% content %]
+	<!-- <div id="main_container" class="container js-load">
+		<section class="viewport">
+			<div class="flex-wrap">
+				[% content %]
+			</div>
+		</section>
+	</div> -->
 </body>
 </html>

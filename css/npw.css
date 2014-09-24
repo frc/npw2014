@@ -381,6 +381,15 @@ input[type=password] {
 }
 
 /*
+
+* Wiki
+*/
+
+.section__wikiedit {
+	text-align: center;
+}
+
+/*
 * Unregister
 */
 

@@ -228,6 +228,18 @@ section h3 {
 }
 
 /*
+* Sponsors section
+*/
+
+.frontpage-section__sponsor {
+	text-align: center;
+}
+
+.sponsor-images {
+	margin: 40px 0 40px 0;
+}
+
+/*
 * Call for Papers
 */
 

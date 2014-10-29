@@ -1,8 +1,8 @@
 <li>
-	<a href="">New User</a>
+	<a href="/npw2014/register">New User</a>
 </li>
 <li>
-	<a href="">Statistics</a>
+	<a href="/npw2014/stats">Statistics</a>
 </li>
 <li>
 	<a href="http://act.mongueurs.net/conferences.html">Other Conferences</a>

@@ -13,9 +13,9 @@
 <li>
 	<a href="[% global.request.base_url %][% make_uri('wiki') %]">Wiki</a>
 </li>
-<!-- <li>
+<li>
 	<a href="[% global.request.base_url %][% make_uri('talks') %]">Talks</a>
-</li> -->
+</li>
 [% UNLESS global.request.user %]
 	<li>
 		<a href="[% make_uri('main') %]">Log in</a>

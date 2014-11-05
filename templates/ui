@@ -31,10 +31,11 @@
 	<script src="[% make_uri_info('js', 'device.min.js') %]"></script>
 	<script src="[% make_uri_info('js', 'main.js') %]"></script>
 
-
-
 	<!-- Favorite icon -->
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+	<link rel="image_src" href="/npw2014/image/hki.jpg" />
+        <meta property="og:image" content="/npw2014/image/hki.jpg" />
 </head>
 
 <body>

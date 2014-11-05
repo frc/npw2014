@@ -146,6 +146,7 @@ h1,h2,h3,h4,h5 {
 .frontpage-text__buttons {
 	margin-top: 40px;
 	text-align: center;
+	padding: 0 20px 0 20px;
 }
 
 .cursor {
@@ -161,6 +162,10 @@ h1,h2,h3,h4,h5 {
 	font-size: 1.2em;
 	font-family: verdana;
 	font-weight: bold;
+
+	display: block;
+	width: 100%;
+	margin-top: 10px;
 }
 
 
@@ -418,11 +423,31 @@ input[type=password] {
 	border: 1px solid rgba(51, 51, 51, 0.25);
 }
 
+/*
+* Schedule
+*/
+
+.section__schedule {
+	text-align: center;
+}
+
 
 @media screen and (min-width: 450px){
 	.frontpage-text {
 		font-size: 6em;
 		letter-spacing: -15px;
+	}
+}
+
+@media screen and (min-width: 500px){
+	.frontpage-button {
+		display: inline;
+		width: auto;
+		margin-top: 0px;
+	}
+
+	.frontpage-text__buttons {
+		padding: 0;
 	}
 }
 

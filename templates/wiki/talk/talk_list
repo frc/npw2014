@@ -1,6 +1,7 @@
 [% RETURN UNLESS talks.size %]
 [% INCLUDE js/mytalks.js %]
 <table class="talktable" border="0" cellspacing="0" cellpadding="4">
+	<h1>teteststst</h1>
 <tr>
  <th>{{Speaker}}</th>
  <th>{{Talk title}}</th>
@@ -60,7 +61,7 @@
 		[% END %]
 		[% IF global.request.user.is_talks_admin %]
 		<td align="center">
-		<input type="checkbox" name="[% t.talk_id %]"[% ' checked' IF t.accepted %] />
+		<input type="checkbox" name="[% t.talk_id %]"[% 'checked' IF t.accepted %] />
 		</td>
 		[% END %]
 	</tr>

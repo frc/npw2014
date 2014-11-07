@@ -3,7 +3,7 @@
    END;
    WRAPPER ui title = title %]
 <div class="container npwsingle">
-	<section id="register" class="fsection section__register">
+	<section id="talks" class="fsection section__register">
 		<div class="section-content-wrapper">
 		  	<h2>Talks</h2>
 			<p>

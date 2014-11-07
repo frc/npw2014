@@ -5,6 +5,7 @@
 <head>
 	<!-- Document Metadata -->
 	<meta http-equiv="Content-Language" content="[% global.request.language %]" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- OpenId -->
 	[% IF openid %]
 	<link rel="openid.server" href="[% global.request.base_url %][% make_uri('openid') %]" />

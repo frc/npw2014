@@ -98,7 +98,7 @@ Preliminary schedule, the order and time of the talks may change. There is still
    [% IF loop.first %]
      <td align="center" valign="top" class="header">[% date_format(col, 'time').replace(' ', '&nbsp;') %]</td>
    [% ELSE %]
-     <td valign="top" [% IF col.height AND col.height > 1 %]rowspan="[% col.height %]"[% END %] [% IF col.room %]class="[% col.room %]"[% IF col.room.match('^(?:out|venue)$') %] style="background-color: White;"; colspan="[% maxwidth.$d %]"[% END %][% END %]>
+     <td valign="top" [% IF col.height AND col.height > 1 %]rowspan="[% col.height %]"[% END %] [% IF col.room %]class="[% col.room %]"[% IF col.room.match('^(?:out|venue)$') %] style="background-color: White !important;" colspan="[% maxwidth.$d %]"[% END %][% END %]>
        [% timeslot(col) %]
        <span id="starcount-[% col.id %]" style="white-space:nowrap">[% IF col.stars %]<span class="starcount">[% col.stars %]</span><img style="vertical-align:middle" src="/images/picked.gif" />[% END %]</span>
      </td>
